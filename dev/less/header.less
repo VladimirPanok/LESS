@@ -1,3 +1,29 @@
-h1{
-	font-size: @f_s;
+
+
+.header{
+	background-color: @basecolor;
+	color: @baseTextColor;
+	font-size: 18px;
+	ul{
+		li{
+			.inline-block;
+			padding: 20px 30px;
+			&:after{
+				content: '';
+				.inline-block(middle);
+				margin-left: 30px;
+				width: 10px;
+				height: 10px;
+				background-color: @baseTextColor;
+				border-radius: 20px;
+
+		}
+	}
+}
+
+	.actions{
+		.iconEmail{
+			.icon(email);
+		}	
+	}
 }

@@ -16,3 +16,11 @@ gulp.task('less',function(){
 	.pipe(gulp.dest('build/css/'));
 })
 
+gulp.task('default', function(){
+	gulp.start('less');
+})
+
+	gulp.watch('dev/less/**/*.less', function(){
+		gulp.start('less');
+	})
+
