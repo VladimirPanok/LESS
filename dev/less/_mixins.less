@@ -34,3 +34,23 @@
 	.inline-block(middle);
 	.bordered;
 }*/
+
+
+.grid(@name, @columnNumber: 1) when (@columnNumber <= @columnCount){
+	.@{name}@{columnNumber}{
+		width: (100% / @columnCount) * @columnNumber ;
+	}
+	.grid(@name, @columnNumber+1);
+}
+
+
+.font-size(@fs, @step:3, @count:0) when (@count < 6){
+	@number: @count+1;
+	h@{number} {
+		font-size: @fs - (@count* @step);
+	}
+
+	.font-size(@fs, @step, @count+1)
+
+	
+}
